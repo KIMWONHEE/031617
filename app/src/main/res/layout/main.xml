@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="300dp"
+        android:layout_height="20dp"
+        android:layout_weight="0.49"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="onMyClick"
+        android:text="Relative layout"
+        android:textSize="10pt"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="300dp"
+        android:layout_height="20dp"
+        android:layout_weight="0.49"
+        android:layout_marginBottom="20dp"
+        android:onClick="onMyClick"
+        android:text="학점 계산기"
+        android:textSize="10pt" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="300dp"
+        android:layout_height="20dp"
+        android:layout_weight="0.49"
+        android:layout_marginBottom="30dp"
+        android:onClick="onMyClick"
+        android:text="레스토랑 예약시스템"
+        android:textSize="10pt" />
+
+</LinearLayout>
