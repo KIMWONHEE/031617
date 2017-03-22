@@ -15,7 +15,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         setTitle("실습03.");
-
     }
 
     public void onMyClick(View v) {
