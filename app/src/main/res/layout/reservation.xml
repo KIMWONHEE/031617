@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
 
     <TextView
         android:id="@+id/textView"
@@ -56,7 +57,8 @@
 
     <FrameLayout
         android:layout_width="322dp"
-        android:layout_height="362dp">
+        android:layout_height="362dp"
+        android:layout_gravity="center">
 
         /* 날짜 예약 */
 
@@ -64,8 +66,7 @@
             android:id="@+id/datePicker"
             android:layout_width="375dp"
             android:layout_height="360dp"
-            android:visibility="invisible"
-            android:gravity="center"/>
+            android:visibility="invisible" />
 
         /* 시간 예약 */
 
@@ -299,29 +300,31 @@
     </FrameLayout>
 
     <GridLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:rowCount="1"
-        android:columnCount="2" >
+        android:layout_gravity="center"
+        android:columnCount="2"
+        android:rowCount="1">
+
         <Button
             android:id="@+id/button"
             android:layout_width="185dp"
             android:layout_height="wrap_content"
-            android:text="이전"
-            android:visibility="invisible"
-            android:onClick="onMyClick"
+            android:layout_column="0"
             android:layout_row="0"
-            android:layout_column="0"/>
+            android:onClick="onMyClick"
+            android:text="이전"
+            android:visibility="invisible" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="185dp"
             android:layout_height="wrap_content"
-            android:text="다음"
-            android:visibility="invisible"
-            android:onClick="onMyClick"
+            android:layout_column="1"
             android:layout_row="0"
-            android:layout_column="1"/>
+            android:onClick="onMyClick"
+            android:text="다음"
+            android:visibility="invisible" />
     </GridLayout>
 
 </LinearLayout>
