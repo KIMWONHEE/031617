@@ -68,15 +68,10 @@ public class Main4Activity extends AppCompatActivity {
                     pageChange();
                 }
                 else {
-                    time_ing.setVisibility(View.INVISIBLE);
-                    onepage.setVisibility(View.INVISIBLE);
-                    twopage.setVisibility(View.INVISIBLE);
-                    threepage.setVisibility(View.INVISIBLE);
-                    fourpage.setVisibility(View.INVISIBLE);
-                    prev.setVisibility(View.INVISIBLE);
-                    next.setVisibility(View.INVISIBLE);
                     time_ing.stop();
                     time_ing.setBase(SystemClock.elapsedRealtime());
+                    pagenum = 0;
+                    pageChange();
                 }
             }
         }
@@ -85,8 +80,16 @@ public class Main4Activity extends AppCompatActivity {
     }
 
     void pageChange() {
-
-        if (pagenum == 1) {
+        if ( pagenum == 0 ) {
+            time_ing.setVisibility(View.INVISIBLE);
+            onepage.setVisibility(View.INVISIBLE);
+            twopage.setVisibility(View.INVISIBLE);
+            threepage.setVisibility(View.INVISIBLE);
+            fourpage.setVisibility(View.INVISIBLE);
+            prev.setVisibility(View.INVISIBLE);
+            next.setVisibility(View.INVISIBLE);
+        }
+        else if (pagenum == 1) {
             onepage.setVisibility(View.VISIBLE);
             twopage.setVisibility(View.INVISIBLE);
             threepage.setVisibility(View.INVISIBLE);
@@ -95,6 +98,7 @@ public class Main4Activity extends AppCompatActivity {
             next.setVisibility(View.VISIBLE);
 
             prev.setEnabled(false);
+            next.setEnabled(true);
         }
         else if (pagenum == 2) {
             onepage.setVisibility(View.INVISIBLE);
@@ -105,6 +109,7 @@ public class Main4Activity extends AppCompatActivity {
             next.setVisibility(View.VISIBLE);
 
             prev.setEnabled(true);
+            next.setEnabled(true);
         }
         else if (pagenum == 3) {
             onepage.setVisibility(View.INVISIBLE);
@@ -114,6 +119,7 @@ public class Main4Activity extends AppCompatActivity {
             prev.setVisibility(View.VISIBLE);
             next.setVisibility(View.VISIBLE);
 
+            prev.setEnabled(true);
             next.setEnabled(true);
         }
         else if (pagenum == 4) {
@@ -124,6 +130,7 @@ public class Main4Activity extends AppCompatActivity {
             prev.setVisibility(View.VISIBLE);
             next.setVisibility(View.VISIBLE);
 
+            prev.setEnabled(true);
             next.setEnabled(false);
 
             int year = onepage.getYear();
